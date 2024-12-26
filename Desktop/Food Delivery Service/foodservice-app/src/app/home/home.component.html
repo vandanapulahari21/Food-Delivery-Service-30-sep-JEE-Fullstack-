@@ -1,0 +1,34 @@
+<div class="section1">
+  <a class="about-us" routerLink="/about" (click)="navigateToAbout()">About Us</a>
+  <a class="login" routerLink="/login" (click)="navigateToLogin()">Login</a>
+  <a class="register" routerLink="/register" (click)="navigateToRegister()">Register</a>
+ 
+  <div class="content-container">
+    <div class="header-text">
+      <h1>Food Delivery App</h1>
+      <p>Discover the best food & drinks</p>
+    </div>
+ 
+    <!-- Search Bar -->
+    <div class="search-bar">
+      <input
+        type="text"
+        placeholder="Search for restaurants or food items"
+        [(ngModel)]="searchQuery"
+        (keyup)="searchRestaurant($event)">
+    </div>
+ 
+    <!-- Display message if no restaurant matches the search query -->
+  </div>
+</div>
+ <!-- Section 2: Display the Restaurant Component -->
+ <div class="restaurant-list-section"  *ngIf="restaurantName.length===0">
+  <h3> Available Restaurants </h3>
+  <restaurant-list></restaurant-list>
+</div>
+
+<!-- Section for displaying a searched Restaurant -->
+ <div *ngIf="restaurantName.length != 0">
+      <searched-restaurant [restaurantName]="restaurantName"></searched-restaurant>
+ </div>
+ 

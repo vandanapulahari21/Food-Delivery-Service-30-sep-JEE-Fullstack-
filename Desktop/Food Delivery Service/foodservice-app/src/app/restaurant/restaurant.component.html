@@ -1,0 +1,48 @@
+<button class="toggle-cart" (click)="toggleCartVisibility()">Cart</button>
+<div class="menu-container">
+  <div *ngFor="let menuItem of menuItems" class="menu-item">
+    <div class="item-details">
+      <span class="item-name">{{ menuItem.itemName }}</span><br />
+      {{ menuItem.itemDescription }}<br />
+      ₹{{ menuItem.itemPrice }}<br />
+      <button class="add-button" (click)="addToCart(menuItem.itemId)">
+        Add to Cart
+      </button>
+    </div>
+    <div class="item-image">
+      <img
+        [src]="'/assets/images/' + menuItem.itemId + '.jpeg'"
+        alt="{{ menuItem.itemName }}"
+      />
+    </div>
+  </div>
+</div>
+<!-- Cart Modal -->
+<div *ngIf="isCartVisible" class="cart-modal">
+  <div class="cart-container">
+    <div class="cart-header">
+      <h3>Your Cart</h3>
+      <button class="close-cart" (click)="removeCart()">×</button>
+    </div>
+    <div class="cart-content">
+      <div *ngFor="let item of cart" class="cart-item">
+        <span>{{ getItemName(item.itemId) }}</span>
+        <span>${{ getItemPrice(item.itemId) }}</span>
+        <span>Quantity: {{ item.quantity }}</span>
+        <div class="cart-item-buttons">
+          <button (click)="removeFromCart(item.itemId)">-</button>
+          <button (click)="addToCart(item.itemId)">+</button>
+        </div>
+      </div>
+      <div class="cart-total">
+        <span>Total: ₹{{ getTotalPrice() }}</span>
+      </div>
+      <div class="coupon-code">
+        <input type="text" [(ngModel)]="couponCode" placeholder="Enter coupon code" />
+        <button (click)="applyCoupon()">Apply</button>
+      </div>
+      <button class="proceed-button" [disabled]="!isProceedEnabled()" (click)="proceed()">Proceed</button>
+    </div>
+  </div>
+</div>
+ 

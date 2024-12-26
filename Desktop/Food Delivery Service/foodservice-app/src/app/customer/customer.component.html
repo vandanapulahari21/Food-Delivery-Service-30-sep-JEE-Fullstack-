@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <div class="container mt-4">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body">
+            <div class="profile-logo text-center mb-3">
+              <img src="https://th.bing.com/th/id/OIP.GqGVPkLpUlSo5SmeDogUdwHaHa?w=160&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7" alt="Profile Logo">
+            </div>
+            <div class="sidebar">
+              <ul class="list-group">
+                <li class="list-group-item"><a (click)="getCustomerById(1)">Details</a></li>
+                <li class="list-group-item"><a (click)="getOrdersByCustomerId(1)">Orders</a></li>
+                <li class="list-group-item"><a (click)="getReviewsByCustomerId(1)">Reviews</a></li>
+                <li class="list-group-item"><a (click)="showFavorites()">Favorites</a></li>
+                <li class="list-group-item"><a (click)="showUpdateSection()">Update Details</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-8">
+        <h2>Customer Details Management</h2>
+        <div *ngIf="customer.customerId" class="card">
+          <div class="card-header">
+            Customer Details
+          </div>
+          <div class="card-body">
+            <div class="d-flex justify-content-between">
+              <h5 class="card-title"><strong>Name:</strong> {{ customer.customerName }}</h5><br>
+              <p class="card-text"><strong>Email:</strong> {{ customer.customerEmail }}</p><br>
+              <p class="card-text"><strong>Phone:</strong> {{ customer.customerPhone }}</p><br>
+            </div>
+          </div>
+        </div>
+        <!-- Orders List -->
+        <div *ngIf="ordersList.length > 0">
+          <div *ngFor="let order of ordersList" class="card mb-3">
+            <div class="card-header">
+              Orders Details
+            </div>
+            <div class="card-body">
+              <p class="card-text"><strong>Order Id :  </strong><span> {{ order.orderId }}</span></p>
+              <p class="card-text"><strong>Date :  </strong>{{ order.orderDate }}</p>
+              <p class="card-text"><strong>Status :  </strong> {{ order.orderStatus }}</p>
+            </div>
+          </div>
+        </div>
+        <!-- Reviews List -->
+        <div *ngIf="reviewsList.length > 0" class="card mb-3">
+          <div class="card-header">
+            Customer Reviews
+          </div>
+          <div class="card-body-reviews">
+            <textarea class="form-control custom-textarea" rows="10" readonly>
+              {{ getReviewsText() }}
+            </textarea>
+          </div>
+        </div>
+        <!-- Favorites Section -->
+        <div *ngIf="showFavoritesSection" class="card mb-3">
+          <div class="card-header">
+            Manage Favorite Restaurants
+          </div>
+          <div class="card-body">
+            <div class="input-group mb-3">
+              <input type="text" class="form-control" placeholder="Enter Restaurant ID" [(ngModel)]="restaurantId">
+              <div class="input-group-append">
+                <button class="btn btn-primary" type="button" (click)="addFavoriteRestaurant(1, restaurantId)">Add</button>
+                <button class="btn btn-danger" type="button" (click)="removeFavoriteRestaurant(1, restaurantId)">Remove</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Update and Delete Section -->
+        <div *ngIf="showUpdateSectionFlag" class="card mb-3">
+          <div class="card-header">
+            Update or Delete Customer
+          </div>
+          <div class="card-body">
+            <button class="btn btn-primary" (click)="showUpdateForm()">Update</button>
+            <button class="btn btn-danger" (click)="deleteCustomerById(21)">Delete</button>
+          </div>
+        </div>
+ 
+        <!-- Update Form -->
+        <div *ngIf="showUpdateFormFlag" class="card mb-3">
+          <div class="card-header">
+            Update Customer Details
+          </div>
+          <div class="card-body">
+            <form (ngSubmit)="modifyCustomer(1)">
+              <div class="form-group">
+                <label for="customerId">Id</label>
+                <input type="text" class="form-control" id="customerId" [(ngModel)]="customer.customerId" name="customerId" required>
+              </div>
+              <div class="form-group">
+                <label for="customerName">Name</label>
+                <input type="text" class="form-control" id="customerName" [(ngModel)]="customer.customerName" name="customerName" required>
+              </div>
+              <div class="form-group">
+                <label for="customerEmail">Email</label>
+                <input type="email" class="form-control" id="customerEmail" [(ngModel)]="customer.customerEmail" name="customerEmail" required>
+              </div>
+              <div class="form-group">
+                <label for="customerPhone">Mobile</label>
+                <input type="text" class="form-control" id="customerPhone" [(ngModel)]="customer.customerPhone" name="customerPhone" required>
+              </div>
+              <button type="submit" class="btn btn-success">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

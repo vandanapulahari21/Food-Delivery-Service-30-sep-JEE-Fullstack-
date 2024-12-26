@@ -1,0 +1,220 @@
+body {
+  background-color: #f4f7fc;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+ 
+/* Section 1 styles */
+.section1 {
+  height: 300px; /* You can adjust this height as per your need */
+  background-image: url('https://th.bing.com/th/id/OIP.rBLaaep2z-ThTxDoPYyvSwHaFi?pid=ImgDet&w=199&h=148&c=7&dpr=1.5'); /* Add your background image */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  background-color: rgb(70, 70, 70);
+}
+ 
+.content-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
+}
+ 
+.header-text h1 {
+  font-size: 36px;
+  color: white;
+}
+ 
+.header-text p {
+  font-size: 30px;
+  color: white;
+}
+ 
+.search-bar input {
+  padding: 10px;
+  width: 50%;
+  margin-top: 20px;
+  border: none;
+  border-radius: 5px;
+  align-items: center;
+}
+ 
+.about-us,
+.profile,
+.login,
+.register {
+  position: absolute;
+  top: 20px;
+  font-size: 20px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  color: white;
+  cursor: pointer;
+}
+ 
+.about-us {
+  left: 20px;
+  background-color: #4caf50;
+}
+ 
+.about-us:hover {
+  background-color: #45a049;
+}
+ 
+.profile {
+  left:150px; /* Adjusted to place right to About Us */
+  background-color:#f4f4f4;
+ 
+}
+.profile-icon {
+  width: 40px; /* Adjust the size as needed */
+  height: 40px; /* Adjust the size as needed */
+  border-radius: 50%; /* Makes the image circular */
+}
+ 
+.profile:hover {
+  background-color:grey;
+}
+ 
+.login {
+  right: 140px;
+  background-color: #4caf50;
+}
+ 
+.login:hover {
+  background-color: #45a049;
+}
+ 
+.register {
+  right: 20px;
+  background-color: #2196f3;
+}
+ 
+.register:hover {
+  background-color: #1976d2;
+}
+ 
+/* Section 2 styles */
+.section2 {
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+ 
+.restaurant-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+ 
+.restaurant-card {
+  background-color: #f4f4f4;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+ 
+button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+ 
+button:hover {
+  background-color: #45a049;
+}
+ 
+table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+ 
+th, td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+ 
+th {
+  background-color: #f2f2f2;
+}
+ 
+/* Container for the restaurant list section */
+.restaurant-list-section {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 10px;
+}
+ 
+/* Title for the restaurant list section */
+.restaurant-list-section h3 {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+ 
+/* Style for the restaurant list component */
+restaurant-list {
+  display: block; /* Ensures that the component behaves like a block-level element */
+  margin-top: 20px;
+}
+ 
+/* Optional: Add space and alignment for the restaurant cards if rendered inside the restaurant list */
+.restaurant-list-section .restaurant-list {
+  display: grid; /* Grid layout for restaurant cards */
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid */
+  gap: 20px;  /* Space between restaurant cards */
+  padding: 0;
+  list-style-type: none; /* Remove list bullet points if using unordered list */
+}
+ 
+/* Optional: Adding styles for each restaurant card component */
+.restaurant-list-section .restaurant-card {
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+ 
+.restaurant-list-section .restaurant-card h3 {
+  font-size: 1.2rem;
+  color: #333;
+  margin-top: 10px;
+}
+ 
+.restaurant-list-section .restaurant-card p {
+  color: #555;
+}
+ 
+.restaurant-list-section .restaurant-card button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+ 
+.restaurant-list-section .restaurant-card button:hover {
+  background-color: #0056b3;
+}

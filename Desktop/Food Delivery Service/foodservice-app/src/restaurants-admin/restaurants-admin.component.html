@@ -1,0 +1,95 @@
+<div class="container">
+    <h2>Restaurant Management</h2>
+    <form>
+      <div class="form-group">
+        <label for="restaurantId">Restaurant ID:</label>
+        <input type="number" id="restaurantId" [(ngModel)]="restaurant.restaurantId" name="restaurantId" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="restaurantName">Restaurant Name:</label>
+        <input type="text" id="restaurantName" [(ngModel)]="restaurant.restaurantName" name="restaurantName" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="restaurantAddress">Restaurant Address:</label>
+        <input type="text" id="restaurantAddress" [(ngModel)]="restaurant.restaurantAddress" name="restaurantAddress" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="restaurantPhone">Restaurant Phone:</label>
+        <input type="text" id="restaurantPhone" [(ngModel)]="restaurant.restaurantPhone" name="restaurantPhone" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="imageUrl">Restaurant Image URL:</label>
+        <input type="text" id="imageUrl" [(ngModel)]="restaurant.imageUrl" name="imageUrl" class="form-control" required>
+      </div>
+      <div class="button-container">
+        <button type="button" (click)="addRestaurant()" class="btn btn-primary">Add Restaurant</button>
+        <button type="button" (click)="modifyRestaurant()" class="btn btn-warning">Modify Restaurant</button>
+        <button type="button" (click)="deleteRestaurantById()" class="btn btn-danger">Delete Restaurant</button>
+        <button type="button" (click)="getRestaurantById()" class="btn btn-info">Get Restaurant</button>
+        <button type="button" (click)="getAllRestaurants()" class="btn btn-success">Show All Restaurants</button>
+        <button type="button" (click)="getMenuItemsByRestaurantId()" class="btn btn-secondary">Show Menu Items</button>
+        <button type="button" (click)="getReviewsByRestaurantId()" class="btn btn-secondary">Show Reviews</button>
+      </div>
+    </form>
+    <div *ngIf="errorMessage" class="error-message">
+      <i class="fas fa-exclamation-circle"></i> {{ errorMessage }}
+    </div>
+    <div *ngIf="showRestaurantList && restaurantList.length > 0">
+      <h3>Restaurant List</h3>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Restaurant ID</th>
+            <th>Restaurant Name</th>
+            <th>Restaurant Address</th>
+            <th>Restaurant Phone</th>
+            <th>Restaurant Image</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let restaurant of restaurantList">
+            <td>{{ restaurant.restaurantId }}</td>
+            <td>{{ restaurant.restaurantName }}</td>
+            <td>{{ restaurant.restaurantAddress }}</td>
+            <td>{{ restaurant.restaurantPhone }}</td>
+            <td>{{ restaurant.imageUrl }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div *ngIf="showMenuItemsList && menuItemsList.length > 0">
+      <h3>Menu Items List</h3>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Item Id</th>
+            <th>Item Name</th>
+            <th>Item Price</th>
+            <th>Item Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of menuItemsList">
+            <td>{{ item.itemId }}</td>
+            <td>{{ item.itemName }}</td>
+            <td>{{ item.itemPrice }}</td>
+            <td>{{ item.itemDescription }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div *ngIf="showReviewsList && reviewsList.length > 0">
+        <h3>Reviews List</h3>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Review</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let review of reviewsList">
+              <td>{{ review }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>

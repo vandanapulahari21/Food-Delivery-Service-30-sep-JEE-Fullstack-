@@ -1,0 +1,26 @@
+/* Style for the content box */
+.container {
+    width: 80%;  /* Adjust the width as necessary */
+    max-width: 800px;  /* Limit the maximum width for better readability */
+    margin: 30px auto;  /* Center the box horizontally and add some margin at the top */
+    padding: 20px;  /* Add padding inside the box */
+    background-color: #141111;  /* Light background color */
+    border: 1px solid #ddd;  /* A soft border around the box */
+    border-radius: 8px;  /* Rounded corners */
+    box-shadow: 0 4px 10px #0000001a;  /* Light shadow for better depth */
+  }
+ 
+  /* Heading styling */
+  .container h1 {
+    text-align: center;  /* Center the heading */
+    font-size: 2rem;  /* Larger font size */
+    color:white;  /* Dark text color */
+    margin-bottom: 20px;  /* Add some space below the heading */
+  }
+ 
+  /* Paragraph styling */
+  .container p {
+    font-size: 1.1rem;  /* Slightly larger text for readability */
+    line-height: 1.6;  /* Increase line height for better readability */
+    color:white;  /* Medium grey text color */
+  }

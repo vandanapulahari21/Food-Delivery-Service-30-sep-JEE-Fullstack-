@@ -1,0 +1,114 @@
+body {
+    background-color: #f4f7fc;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+ 
+.register-container {
+    width: 100%;
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #e0e0e0; /* Darker grey background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+ 
+.register-container:hover {
+    transform: scale(1.02);
+}
+ 
+h2 {
+    margin-bottom: 20px;
+    font-size: 32px; /* Increased font size */
+    color: #222; /* Darker color for contrast */
+    text-align: center;
+    font-weight: bold;
+}
+ 
+.form-group {
+    margin-bottom: 20px;
+}
+ 
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #444; /* Darker grey for labels */
+    font-weight: bold;
+}
+ 
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #bbb;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+ 
+.form-group input:focus {
+    border-color: #0056b3; /* Dark blue border on focus */
+    outline: none;
+}
+ 
+.text-danger {
+    color: #e53935;
+    font-size: 0.875rem;
+}
+ 
+.d-grid {
+    display: grid;
+    gap: 15px;
+}
+ 
+.btn {
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+ 
+.btn-primary {
+    background-color: #0056b3; /* Dark blue button */
+    color: #fff;
+}
+ 
+.btn-primary:hover {
+    background-color: #004494; /* Even darker blue on hover */
+}
+ 
+.btn-primary:disabled {
+    background-color: #6c757d; /* Dark grey when disabled */
+}
+ 
+.error {
+    color: #e53935;
+    font-size: 0.875rem;
+    margin-top: 10px;
+}
+ 
+.success {
+    color: #4caf50;
+    font-size: 0.875rem;
+    margin-top: 10px;
+}
+ 
+.login-link {
+    color: #0056b3; /* Dark blue for links */
+    text-decoration: none;
+    font-weight: bold;
+}
+ 
+.login-link:hover {
+    text-decoration: underline;
+}
+ 
+p {
+    text-align: center;
+    font-size: 14px;
+    color: #444; /* Darker grey for text */
+}
+ 
+ 

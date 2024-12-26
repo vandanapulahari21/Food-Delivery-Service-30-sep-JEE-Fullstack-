@@ -1,0 +1,25 @@
+<div class="container d-flex justify-content-center">
+    <h1>Searched Restaurants</h1>
+    <div class="recommended">
+      <div class="row" *ngIf="restaurant; else noRestaurant">
+        <!-- Searched Restaurant Card -->
+        <div class="col-md-3 mb-4">
+          <div class="card h-100">
+            <div class="image-wrapper">
+              <img [src]="restaurant.imageUrl" class="card-img-top" alt="{{ restaurant.restaurantName }}" (click)="gotoRestaurant(restaurant)">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">{{ restaurant.restaurantName }}</h5>
+              <p class="card-text">{{ restaurant.restaurantAddress }}</p>
+              <p class="card-text">{{ restaurant.restaurantPhone }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <ng-template #noRestaurant>
+        <div class="no-restaurant-message">
+          <p>No restaurant found.</p>
+        </div>
+      </ng-template>
+    </div>
+  </div>

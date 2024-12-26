@@ -1,0 +1,332 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f7fc;
+  margin: 0;
+}
+
+.menu-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px; /* Space between menu items */
+  background-color: #ffffff; /* Light background color */
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 85%;
+  height: 150px;
+  border: 1px solid grey;
+  padding: 10px;
+  box-sizing: border-box;
+  margin-left: 100px;
+  border-radius: 10px;
+  background-color: #f9f9f9; /* Light background color for each item */
+}
+
+.item-details {
+  flex: 1;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.item-name {
+  font-size: 1.5rem; /* Increased font size */
+  font-weight: bold; /* Made bold */
+}
+
+.item-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.item-image img {
+  width: 150px; /* Set width of the image */
+  height: 130px; /* Set height of the image */
+  object-fit: cover;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f7fc;
+  margin: 0;
+}
+
+.menu-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px; /* Space between menu items */
+  background-color: #ffffff; /* Light background color */
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 85%;
+  height: 150px;
+  border: 1px solid grey;
+  padding: 10px;
+  box-sizing: border-box;
+  margin-left: 100px;
+  border-radius: 10px;
+  background-color: #f9f9f9; /* Light background color for each item */
+}
+
+.item-details {
+  flex: 1;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.item-name {
+  font-size: 1.5rem; /* Increased font size */
+  font-weight: bold; /* Made bold */
+}
+
+.item-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.item-image img {
+  width: 150px; /* Set width of the image */
+  height: 130px; /* Set height of the image */
+  object-fit: cover;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+body {
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+background-color: #f4f7fc;
+margin: 0;
+}
+
+.menu-container {
+display: flex;
+flex-direction: column;
+gap: 16px; /* Space between menu items */
+background-color: #ffffff; /* Light background color */
+padding: 20px;
+border-radius: 20px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.menu-item {
+display: flex;
+justify-content: space-between;
+align-items: center;
+width: 85%;
+height: 150px;
+border: 1px solid grey;
+padding: 10px;
+box-sizing: border-box;
+margin-left: 100px;
+border-radius: 10px;
+background-color: #f9f9f9; /* Light background color for each item */
+}
+
+.item-details {
+flex: 1;
+font-size: 1.2rem;
+color: #333;
+}
+
+.item-name {
+font-size: 1.5rem; /* Increased font size */
+font-weight: bold; /* Made bold */
+}
+
+.item-image {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+height: 100%;
+}
+
+.item-image img {
+width: 150px; /* Set width of the image */
+height: 130px; /* Set height of the image */
+object-fit: cover;
+border: 1px solid black;
+border-radius: 10px;
+}
+ 
+.add-button {
+  background-color: #ffcccc; /* Pale red background */
+  color: #ff0000; /* Red text */
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  margin-top: 10px; /* Add some space above the button */
+}
+
+.add-button:hover {
+  background-color: tomato; /* Darker pale red on hover */
+}
+
+.cart-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cart-container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 80%;
+  max-width: 600px;
+}
+
+.cart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.cart-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.cart-item-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.cart-item button {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.cart-item button:hover {
+  background-color: #d32f2f;
+}
+
+.cart-total {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.coupon-code {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.coupon-code input {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.coupon-code button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.coupon-code button:hover {
+  background-color: #0056b3;
+}
+
+.proceed-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 10px;
+  align-self: flex-end;
+}
+
+.proceed-button:hover {
+  background-color: #0056b3;
+}
+
+.close-cart {
+  background-color: #ff0000;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.close-cart:hover {
+  background-color: #d32f2f;
+}
+
+.toggle-cart {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+}
+
+.toggle-cart:hover {
+  background-color: #0056b3;
+}

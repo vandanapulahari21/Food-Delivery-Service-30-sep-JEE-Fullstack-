@@ -1,0 +1,123 @@
+.profile-logo img {
+  width: 100px; /* Adjust the size as needed */
+  border-radius: 50%; /* Makes the image circular */
+  margin-top: 50px;
+}
+.sidebar {
+  background-color: #343a40;
+  color: white;
+  padding: 10px;
+  height: 80vh; /* Adjust the height as needed */
+  overflow-y: auto; /* Add scroll if content overflows */
+  width: 100%;
+}
+.sidebar .list-group-item {
+  background-color: #343a40;
+  border: none;
+  margin-top: 25px;
+}
+.sidebar .list-group-item a {
+  color: white;
+  font-size:larger;
+  text-decoration: none;
+ 
+}
+.btn-primary {
+  border: none;
+}
+.custom-border {
+  border: 2px solid black;
+}
+.content {
+  flex-grow: 1;
+}
+.details {
+  padding: 15px;
+  margin-top: 70px;
+}
+ 
+.details p {
+ 
+  display: flex;
+  align-items: center;
+  margin-left: 200px;
+}
+ 
+.details p strong {
+  width: 100px; /* Adjust the width as needed */
+  display: flex;
+  align-items: center;
+}
+ 
+.details button {
+  margin-top: 20px;
+}
+textarea.form-control {
+  min-width: auto;
+  display: flex;
+  background-color:lightgrey;
+  text-align: center;
+  border-radius: 20px;
+}
+.card {
+  margin-top: 20px; /* Adjust the top margin as needed */
+}
+.card-text {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 10px; /* Adjust the spacing between lines as needed */
+}
+.card-body {
+  display: flex;
+  flex-direction: column;
+}
+ 
+.card-text strong {
+  min-width: 100px; /* Adjust the width as needed */
+  text-align: right;
+  margin-right: 10px; /* Adjust the spacing between the label and the value */
+}
+ 
+.card-text span {
+  flex-grow: 1;
+  text-align: left;
+}
+.card-header{
+  text-align: center; /* Center-align text within the card */
+}
+.card-body-reviews {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.custom-textarea {
+  width: 100%;
+  max-width: 400px; /* Adjust the max-width as needed */
+  height: 100px; /* Adjust the height as needed */
+}
+.orders-grid {
+  display: flex;
+  flex-direction: column;
+}
+ 
+.orders-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(1000px, 1fr));
+  gap: 10px;
+  justify-content: center;
+  margin: 20px auto; /* Adjust the margin as needed */
+  height: auto; /* Adjust the height as needed */
+  width: 100%; /* Adjust the width as needed */
+}
+ 
+ 
+.orders-container .card {
+  margin: 0 auto;
+}
+ 
+@media (min-width: 768px) {
+  .orders-container {
+      grid-template-columns: repeat(2, 1fr);
+  }
+}

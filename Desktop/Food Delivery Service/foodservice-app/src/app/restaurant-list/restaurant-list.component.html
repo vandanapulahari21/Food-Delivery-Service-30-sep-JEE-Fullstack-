@@ -1,0 +1,17 @@
+<div style="background-color: lightgrey;"class="container">
+  <div class="recommended">
+    <div class="row">
+      <div *ngFor="let restaurant of restaurantList" class="col-md-3 mb-4">
+        <div class="card h-100">
+          <div class="image-wrapper">
+            <img [src]="restaurant.imageUrl" class="card-img-top" alt="{{ restaurant.restaurantName }}" (click)="gotoRestaurant(restaurant)">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">{{ restaurant.restaurantName }}</h5>
+            <p class="card-text">{{ restaurant.restaurantAddress }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

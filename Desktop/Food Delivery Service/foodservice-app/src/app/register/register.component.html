@@ -1,0 +1,87 @@
+<div class="body">
+  <div class="register-container">
+    <h2 style="text-align: center;">Register</h2>
+    <form [formGroup]="registerForm"    (ngSumbit)="navigateToLogin()">
+      <div class="form-group">
+          <label for="name">Name</label>
+          <input
+            type="text"
+            id="name"
+            [(ngModel)]="customer.customerName"
+            name="customerName"
+            formControlName="name"
+            class="form-control"
+            placeholder="Enter your name"
+            required
+          />
+          <div *ngIf="registerForm.get('name')?.invalid && registerForm.get('name')?.touched" class="text-danger">
+            Name is required
+          </div>
+      </div>
+ 
+       
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input
+            type="text"
+            id="phone"
+            [(ngModel)]="customer.customerPhone"
+            name="customerPhone"
+            formControlName="phone"
+            class="form-control"
+            placeholder="Enter your phone number (starting with '+')"
+            required
+          />
+          <div *ngIf="registerForm.get('phone')?.invalid && registerForm.get('phone')?.touched" class="text-danger">
+            Phone number must start with '+' and be valid.
+          </div>
+        </div>
+
+       
+ 
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            [(ngModel)]="customer.customerEmail"
+            name="customer"
+            formControlName="email"
+            class="form-control"
+            placeholder="Enter your email"
+            required
+          />
+          <div *ngIf="registerForm.get('email')?.invalid && registerForm.get('email')?.touched" class="text-danger">
+            Valid email is required.
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Password</label>
+          <input
+            type="password"
+            id="password"
+            [(ngModel)]="customer.password"
+            name="password"
+            formControlName="password"
+            class="form-control"
+            placeholder="Enter your password"
+            required
+          />
+          <div *ngIf="registerForm.get('password')?.invalid && registerForm.get('password')?.touched" class="text-danger">
+            Password is required.
+          </div>
+        </div>
+ 
+      <div class="d-grid">
+        <button type="submit" class="btn btn-primary" [disabled]="registerForm.invalid" (click)="addCustomer()" (click)="navigateToLogin()">Register</button>
+      </div>
+      <p *ngIf="errorMessage" class="error">{{ errorMessage }}</p>
+      <p *ngIf="successMessage" class="success">{{ successMessage }}</p>
+    </form>
+ 
+    <p style="text-align: center;cursor: pointer;">
+      Already have an account? <a routerLink="/login" class="login-link" (click)="navigateToLogin()">Login here</a>
+    </p>
+  </div>
+</div>

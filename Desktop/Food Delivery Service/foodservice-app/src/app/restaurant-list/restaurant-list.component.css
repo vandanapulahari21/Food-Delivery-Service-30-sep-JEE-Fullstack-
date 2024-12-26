@@ -1,0 +1,72 @@
+.image-wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 75%;
+  /* Aspect ratio of 4:3 */
+}
+ 
+.image-wrapper img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures images cover the container */
+}
+ 
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border-color: black;
+}
+ 
+.card-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+ 
+/* Grid Layout for Restaurants */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+ 
+/* Ensure 4 items per row (25% width each) */
+.col-md-3 {
+  width: 25%; /* 4 columns per row (each column is 25% width) */
+  padding-right: 15px;
+  padding-left: 15px;
+}
+ 
+/* Responsive Design: 2 columns on medium screens */
+@media (max-width: 767px) {
+  .col-md-3 {
+    width: 50%; /* 2 columns per row on small screens */
+  }
+}
+ 
+/* Responsive Design: 1 column on extra small screens */
+@media (max-width: 576px) {
+  .col-md-3 {
+    width: 100%; /* 1 column per row on extra small screens */
+  }
+}
+ 
+/* Style for Search Bar */
+.search-input {
+  font-size: 1.25rem; /* Increase font size */
+  padding: 10px 15px; /* Add some padding for better size */
+  width: 100%;
+  /* Full width of the container */
+}
+ 
+/* Optional: To make the input look bigger */
+.search-bar {
+  margin-bottom: 20px;
+  ; /* Adds space below the search input */
+}

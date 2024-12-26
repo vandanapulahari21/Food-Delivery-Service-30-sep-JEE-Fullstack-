@@ -1,0 +1,27 @@
+<div class="loginContainer">
+    <h2 style="text-align:center">Login Form</h2>
+    <form #loginForm="ngForm" (ngSubmit)="authenticate(loginForm)">
+    <div class="form-group">
+    <label for="email">Username</label>
+    <input type="email" id="email"  name="email" class="form-control" placeholder="Enter your email"
+                    ngModel required email/>
+    <div class="text-danger" *ngIf="loginForm.submitted && !loginForm.controls['email']?.valid">
+                        Enter  a Valid Email
+    </div>
+    </div >
+    <div class="form-group">
+    <label for="password">password</label>
+    <input type="password" id="password"  name="password" class="form-control"  placeholder="Enter your password"
+                    ngModel minlength="8"/>
+    <div class="text-danger" *ngIf="loginForm.submitted && !loginForm.controls['password']?.valid">
+                    Password should not be less than 8 characters
+    </div>
+    </div>
+    <div class="d-grid">
+    <button class="btn btn-primary" type="submit" [disabled]="!loginForm.valid"> Login </button>
+    </div>
+    </form>
+    <div class="register-link">
+    <p>New user? <a routerLink="/register" (click) = "navigateToRegister()">Register here</a></p>
+    </div>
+    </div>  

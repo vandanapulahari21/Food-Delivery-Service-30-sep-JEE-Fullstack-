@@ -1,0 +1,38 @@
+.delivery-driver-card {
+    padding: 20px;
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card {
+    padding: 15px;
+    border: 1px solid #ddd;
+    background-color: #ffffff;
+    border-radius: 5px;
+    margin-top: 15px;
+  }
+  
+  .card p {
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 25px;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .button:hover {
+    background-color: #45a049;
+  }
+  

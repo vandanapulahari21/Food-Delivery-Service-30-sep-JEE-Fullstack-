@@ -1,0 +1,10 @@
+<div class="delivery-driver-card" *ngIf="showDeliveryDetails">
+    <h3>Delivery Driver Details</h3>
+    <div class="card">
+      <p><strong>Name:</strong> {{ selectedDriver?.name }}</p>
+      <p><strong>Phone:</strong> {{ selectedDriver?.phone }}</p>
+      <p><strong>Estimated Delivery Time:</strong> {{ selectedDriver?.estimatedDeliveryTime }}</p>
+    </div>
+    <button class="button" (click)="goHome()">Go to Home</button>
+  </div>
+  
